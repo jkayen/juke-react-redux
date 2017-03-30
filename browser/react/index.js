@@ -38,7 +38,7 @@ const unsubscribe = store.subscribe(function () {
 
 store.dispatch(setLyrics('I can feel it coming in the air tonight ... hold on ...'));
 store.dispatch(setLyrics('Never gonna give you up, never gonna let you down'));
-
+console.log(unsubscribe);
 unsubscribe();
 
 store.dispatch(setLyrics('Hello, darkness, my old friend.'));

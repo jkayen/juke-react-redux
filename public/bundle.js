@@ -15088,7 +15088,7 @@ var unsubscribe = _store2.default.subscribe(function () {
 
 _store2.default.dispatch((0, _lyrics.setLyrics)('I can feel it coming in the air tonight ... hold on ...'));
 _store2.default.dispatch((0, _lyrics.setLyrics)('Never gonna give you up, never gonna let you down'));
-
+console.log(unsubscribe);
 unsubscribe();
 
 _store2.default.dispatch((0, _lyrics.setLyrics)('Hello, darkness, my old friend.'));
