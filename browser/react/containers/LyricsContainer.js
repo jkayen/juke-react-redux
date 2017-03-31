@@ -29,11 +29,14 @@ export default class LyricsContainer extends React.Component {
   setSong(songSearchText) {
     this.setState({songQuery: songSearchText})
   }
-  handleSubmit() {
-    axios.get(`/api/lyrics/${this.state.artistQuery}/${this.state.songQuery}`)
-    .then(response => response.data.lyric)
-    .then(lyrics => store.dispatch(setLyrics(lyrics)))
-    .catch(console.error)
+  handleSubmit(event) {
+    event.preventDefault()
+    if (this.state.artistQuery && this.state.songQuery) {
+      axios.get(`/api/lyrics/${this.state.artistQuery}/${this.state.songQuery}`)
+      .then(response => response.data.lyric)
+      .then(lyrics => store.dispatch(setLyrics(lyrics)))
+      .catch(console.error)
+    }
   }
   render() {
     return (
