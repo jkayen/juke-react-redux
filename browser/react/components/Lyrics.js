@@ -10,7 +10,7 @@ const Lyrics = (props) => {
   const songChange = event => {
     props.setSong(event.target.value);
   };
-
+console.log("props",props)
   return (
     <div id="lyrics">
       <form onSubmit={props.handleSubmit}>
